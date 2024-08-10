@@ -140,8 +140,16 @@ class MainFrame ( wx.Frame ):
 
 		bSizer5.Add( self.m_staticText7, 0, wx.ALL, 5 )
 
+		bSizer131 = wx.BoxSizer( wx.HORIZONTAL )
+
 		self.ExportBtn = wx.Button( self.m_panel3, wx.ID_ANY, u"导出", wx.DefaultPosition, wx.DefaultSize, 0 )
-		bSizer5.Add( self.ExportBtn, 0, wx.ALL, 5 )
+		bSizer131.Add( self.ExportBtn, 0, wx.ALL, 5 )
+
+		self.ExportExplorerBtn = wx.Button( self.m_panel3, wx.ID_ANY, u"打开导出文件夹", wx.DefaultPosition, wx.DefaultSize, 0 )
+		bSizer131.Add( self.ExportExplorerBtn, 0, wx.ALL, 5 )
+
+
+		bSizer5.Add( bSizer131, 1, wx.EXPAND, 5 )
 
 
 		self.m_panel3.SetSizer( bSizer5 )
@@ -197,6 +205,7 @@ class MainFrame ( wx.Frame ):
 		self.MovUpBtn.Bind( wx.EVT_BUTTON, self.MovUpBtnOnClick )
 		self.MovDownBtn.Bind( wx.EVT_BUTTON, self.MovDownBtnOnClick )
 		self.ExportBtn.Bind( wx.EVT_BUTTON, self.ExportBtnOnClick )
+		self.ExportExplorerBtn.Bind( wx.EVT_BUTTON, self.ExportExplorerBtnOnClick )
 		self.ProjectWebBtn.Bind( wx.EVT_BUTTON, self.ProjectWebBtnOnClick )
 
 	def __del__( self ):
@@ -226,6 +235,9 @@ class MainFrame ( wx.Frame ):
 		event.Skip()
 
 	def ExportBtnOnClick( self, event ):
+		event.Skip()
+
+	def ExportExplorerBtnOnClick( self, event ):
 		event.Skip()
 
 	def ProjectWebBtnOnClick( self, event ):

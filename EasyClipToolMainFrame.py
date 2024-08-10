@@ -235,6 +235,14 @@ class EasyClipToolMainFrame(EasyClipTool.MainFrame):
         os.chdir("..")
         return
 
+    def ExportExplorerBtnOnClick( self, event ):
+        """
+        查看导出文件夹 按钮
+        :param event:
+        :return:
+        """
+        subprocess.call(r"explorer .\output")   # 适用 windows 平台
+
     def ProjectWebBtnOnClick(self, event):
         """
         “访问项目”按钮
