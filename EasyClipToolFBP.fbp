@@ -1538,11 +1538,11 @@
                 </object>
               </object>
             </object>
-            <object class="notebookpage" expanded="false">
+            <object class="notebookpage" expanded="true">
               <property name="bitmap"></property>
               <property name="label">使用说明</property>
               <property name="select">1</property>
-              <object class="wxPanel" expanded="false">
+              <object class="wxPanel" expanded="true">
                 <property name="BottomDockable">1</property>
                 <property name="LeftDockable">1</property>
                 <property name="RightDockable">1</property>
@@ -1594,7 +1594,7 @@
                 <property name="window_extra_style"></property>
                 <property name="window_name"></property>
                 <property name="window_style">wxTAB_TRAVERSAL</property>
-                <object class="wxBoxSizer" expanded="false">
+                <object class="wxBoxSizer" expanded="true">
                   <property name="minimum_size"></property>
                   <property name="name">bSizer13</property>
                   <property name="orient">wxVERTICAL</property>
@@ -1632,7 +1632,7 @@
                       <property name="gripper">0</property>
                       <property name="hidden">0</property>
                       <property name="id">wxID_ANY</property>
-                      <property name="label">第一步，添加文件&#x0A;第二步，设置时间&#x0A;第三步，填写导出设置&#x0A;第四步，点击导出按钮&#x0A;&#x0A;如果不知道有些参数有什么用可以不填，应用会使用默认的设置&#x0A;&#x0A;小技巧：&#x0A;- 起止时间里的空格会被替换为“:”，例如“01 20&quot;会被替换为&quot;01:20&quot;&#x0A;- 起止时间如果是&quot;开头&quot;或者&quot;结尾&quot;，则不会对开始时间和结尾时间进行选择</property>
+                      <property name="label">第一步，添加文件&#x0A;第二步，设置时间&#x0A;第三步，填写导出设置&#x0A;第四步，点击导出按钮&#x0A;&#x0A;如果不知道有些参数有什么用可以不填，应用会使用默认的设置&#x0A;&#x0A;小技巧：&#x0A;- 起止时间里的空格会被替换为“:”，例如“01 20&quot;会被替换为&quot;01:20&quot;&#x0A;- 起止时间如果是&quot;开头&quot;或者&quot;结尾&quot;，则不会对开始时间和结尾时间进行选择&#x0A;- 可以直接将文件拖放到这里添加</property>
                       <property name="markup">0</property>
                       <property name="max_size"></property>
                       <property name="maximize_button">0</property>
@@ -1664,11 +1664,11 @@
                 </object>
               </object>
             </object>
-            <object class="notebookpage" expanded="false">
+            <object class="notebookpage" expanded="true">
               <property name="bitmap"></property>
               <property name="label">关于</property>
               <property name="select">0</property>
-              <object class="wxPanel" expanded="false">
+              <object class="wxPanel" expanded="true">
                 <property name="BottomDockable">1</property>
                 <property name="LeftDockable">1</property>
                 <property name="RightDockable">1</property>
@@ -1720,7 +1720,7 @@
                 <property name="window_extra_style"></property>
                 <property name="window_name"></property>
                 <property name="window_style">wxTAB_TRAVERSAL</property>
-                <object class="wxBoxSizer" expanded="false">
+                <object class="wxBoxSizer" expanded="true">
                   <property name="minimum_size"></property>
                   <property name="name">bSizer8</property>
                   <property name="orient">wxVERTICAL</property>
@@ -1758,7 +1758,7 @@
                       <property name="gripper">0</property>
                       <property name="hidden">0</property>
                       <property name="id">wxID_ANY</property>
-                      <property name="label">关于 Easy Clip Tool：&#x0A;一个用于进行简单剪切工作的开源迷你剪辑软件。（起源于方便游戏回放切片排序、压缩等简单操作）&#x0A;&#x0A;项目地址：https://github.com/FishCat233/easy-clip-tool&#x0A;&#x0A;--FishCat233&#x0A;2024.2.27&#x0A;&#x0A;Pure Clip 版本号：&#x0A;0.1</property>
+                      <property name="label">关于 Easy Clip Tool：&#x0A;一个用于进行简单剪切工作的开源迷你剪辑软件。（起源于方便游戏回放切片排序、压缩等简单操作）&#x0A;&#x0A;项目地址：https://github.com/FishCat233/easy-clip-tool&#x0A;&#x0A;--FishCat233&#x0A;2024.2.27&#x0A;&#x0A;Pure Clip 版本号：0.5&#x0A;.</property>
                       <property name="markup">0</property>
                       <property name="max_size"></property>
                       <property name="maximize_button">0</property>

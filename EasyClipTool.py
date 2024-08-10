@@ -151,7 +151,7 @@ class MainFrame ( wx.Frame ):
 		self.m_panel41 = wx.Panel( self.m_notebook1, wx.ID_ANY, wx.DefaultPosition, wx.DefaultSize, wx.TAB_TRAVERSAL )
 		bSizer13 = wx.BoxSizer( wx.VERTICAL )
 
-		self.IntroductionText = wx.StaticText( self.m_panel41, wx.ID_ANY, u"第一步，添加文件\n第二步，设置时间\n第三步，填写导出设置\n第四步，点击导出按钮\n\n如果不知道有些参数有什么用可以不填，应用会使用默认的设置\n\n小技巧：\n- 起止时间里的空格会被替换为“:”，例如“01 20\"会被替换为\"01:20\"\n- 起止时间如果是\"开头\"或者\"结尾\"，则不会对开始时间和结尾时间进行选择", wx.DefaultPosition, wx.DefaultSize, 0 )
+		self.IntroductionText = wx.StaticText( self.m_panel41, wx.ID_ANY, u"第一步，添加文件\n第二步，设置时间\n第三步，填写导出设置\n第四步，点击导出按钮\n\n如果不知道有些参数有什么用可以不填，应用会使用默认的设置\n\n小技巧：\n- 起止时间里的空格会被替换为“:”，例如“01 20\"会被替换为\"01:20\"\n- 起止时间如果是\"开头\"或者\"结尾\"，则不会对开始时间和结尾时间进行选择\n- 可以直接将文件拖放到这里添加", wx.DefaultPosition, wx.DefaultSize, 0 )
 		self.IntroductionText.Wrap( -1 )
 
 		self.IntroductionText.SetMinSize( wx.Size( 460,290 ) )
@@ -166,7 +166,7 @@ class MainFrame ( wx.Frame ):
 		self.m_panel4 = wx.Panel( self.m_notebook1, wx.ID_ANY, wx.DefaultPosition, wx.DefaultSize, wx.TAB_TRAVERSAL )
 		bSizer8 = wx.BoxSizer( wx.VERTICAL )
 
-		self.m_staticText6 = wx.StaticText( self.m_panel4, wx.ID_ANY, u"关于 Easy Clip Tool：\n一个用于进行简单剪切工作的开源迷你剪辑软件。（起源于方便游戏回放切片排序、压缩等简单操作）\n\n项目地址：https://github.com/FishCat233/easy-clip-tool\n\n--FishCat233\n2024.2.27\n\nPure Clip 版本号：\n0.1", wx.DefaultPosition, wx.DefaultSize, 0 )
+		self.m_staticText6 = wx.StaticText( self.m_panel4, wx.ID_ANY, u"关于 Easy Clip Tool：\n一个用于进行简单剪切工作的开源迷你剪辑软件。（起源于方便游戏回放切片排序、压缩等简单操作）\n\n项目地址：https://github.com/FishCat233/easy-clip-tool\n\n--FishCat233\n2024.2.27\n\nPure Clip 版本号：0.5\n.", wx.DefaultPosition, wx.DefaultSize, 0 )
 		self.m_staticText6.Wrap( -1 )
 
 		bSizer8.Add( self.m_staticText6, 0, wx.ALL, 5 )
