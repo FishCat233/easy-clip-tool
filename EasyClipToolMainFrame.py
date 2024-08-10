@@ -7,8 +7,19 @@ import wx
 import EasyClipTool
 
 
+class MyFileDropTarget(wx.FileDropTarget):
+    def __init__(self, mainframe):
+        super().__init__()
+        self.mainframe = mainframe
+
+    def OnDropFiles(self, x, y, filenames):
+        for filename in filenames:
+            self.mainframe.add_files(self.mainframe.list_ctrl.GetItemCount(), os.path.basename(filename), filename)
+        return True
+
+
 # Implementing MainFrame
-class EasyClipToolMainFrame( EasyClipTool.MainFrame ):
+class EasyClipToolMainFrame(EasyClipTool.MainFrame):
     def __init__(self, parent=None, debug_log_level=0):
         EasyClipTool.MainFrame.__init__(self, parent)
 
@@ -22,6 +33,9 @@ class EasyClipToolMainFrame( EasyClipTool.MainFrame ):
         self.list_ctrl.InsertColumn(2, "开始时间", width=65)
         self.list_ctrl.InsertColumn(3, "结束时间", width=65)
         self.list_ctrl.InsertColumn(4, "文件路径", width=238)
+
+        # 绑定 drop file
+        self.m_notebook1.SetDropTarget(MyFileDropTarget(self))
 
     # Handlers for MainFrame events.
     def ApplyTimeButtonOnClick(self, event):
@@ -287,6 +301,6 @@ class EasyClipToolMainFrame( EasyClipTool.MainFrame ):
 
 if __name__ == '__main__':
     App = wx.App()
-    mainFrame = EasyClipToolMainFrame	(None)
+    mainFrame = EasyClipToolMainFrame(None)
     mainFrame.Show(True)
     App.MainLoop()
