@@ -16,6 +16,8 @@ class MyFileDropTarget(wx.FileDropTarget):
     def OnDropFiles(self, x, y, filenames):
         for filename in filenames:
             self.mainframe.add_files(self.mainframe.list_ctrl.GetItemCount(), os.path.basename(filename), filename)
+        self.mainframe.m_notebook1.SetSelection(0)
+        # TODO: 拖动文件这块似乎有问题，导出的时候会连带着文件管理器一起未响应了，怪
         return True
 
 
