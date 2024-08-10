@@ -85,7 +85,12 @@ class EasyClipToolMainFrame( EasyClipTool.MainFrame ):
     def RemoveBtnOnClick(self, event):
         # 删除列表中的项
         delete_index = self.first_selected_index
-        self.item_list.pop(delete_index)
+
+        try:
+            self.item_list.pop(delete_index)
+        except:
+            wx.MessageBox("删除素材失败。", "错误", style=wx.YES_DEFAULT | wx.ICON_QUESTION)
+            return
 
         # 删除界面中的项
 
