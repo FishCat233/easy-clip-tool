@@ -137,6 +137,7 @@ class EasyClipToolMainFrame( EasyClipTool.MainFrame ):
     def ExportBtnOnClick(self, event):
         # TODO: Implement ExportBtnOnClick
         # TODO: 加了码率设置的功能，别忘了测试
+        # TODO: 加入x264对视频进行进一步压缩（可选“压缩”选项）
 
         # 从界面读取导出文件名、路径、码率
         export_name = self.ExportNameCtrl.GetValue()
