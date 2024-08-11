@@ -86,6 +86,33 @@ class ConfigTool:
             pass
         return False
 
+    @staticmethod
+    def compareTimeStr(time_str1: str, time_str2: str) -> bool:
+        """
+        比较两个时间字符串的大小
+        :param time_str1: 时间字符串1
+        :param time_str2: 时间字符串2
+        :return: 如果 time_str1 > time_str2，返回 True
+        """
+        time_str1 = ConfigTool.getTimeStrByStr(time_str1)
+        time_str2 = ConfigTool.getTimeStrByStr(time_str2)
+
+        if time_str2 == "结尾" or time_str1 == "开头":
+            return False
+
+        datetime_obj1 = ConfigTool.timeStrToDateTime(time_str1)
+        datetime_obj2 = ConfigTool.timeStrToDateTime(time_str2)
+
+        return datetime_obj1 > datetime_obj2
+
+    @staticmethod
+    def timeStrToDateTime(time_str: str) -> datetime:
+        try:
+            datetime_obj = datetime.strptime(time_str, "%M:%S")
+        except ValueError:
+            datetime_obj = datetime.strptime(time_str, "%H:%M:%S")
+        return datetime_obj
+
 
 class Config:
     """
@@ -148,14 +175,22 @@ class EasyClipToolMainFrame(EasyClipTool.MainFrame):
         end_time = self.EndTimeCtrl.GetValue()
 
         # 判断开始时间是否有效
-        if ConfigTool.timeStrIsValid(start_time):
+        both_valid = False
+        if ConfigTool.timeStrIsValid(start_time) and ConfigTool.timeStrIsValid(end_time):
+            both_valid = True
+            if ConfigTool.compareTimeStr(start_time, end_time):
+                # 开始时间比结束时间大
+                wx.MessageBox("开始时间比结束时间大", "错误")
+                return
+
+        if both_valid or ConfigTool.timeStrIsValid(start_time):
             # 如果有效，则将开始时间转换为时间字符串
             start_time = ConfigTool.getTimeStrByStr(start_time)
         else:
             # 如果无效，则将开始时间设置为“开头”
             start_time = '开头'
         # 判断结束时间是否有效
-        if ConfigTool.timeStrIsValid(end_time):
+        if both_valid or ConfigTool.timeStrIsValid(end_time):
             # 如果有效，则将结束时间转换为时间字符串
             end_time = ConfigTool.getTimeStrByStr(end_time)
         else:
