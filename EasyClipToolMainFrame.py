@@ -198,13 +198,17 @@ class EasyClipToolMainFrame(EasyClipTool.MainFrame):
             end_time = '结尾'
 
         # 设置物品列表的参数，如果为空就不更改
-        if not start_time == '':
-            self.item_list[apply_time_item_index]["start_time"] = start_time
-        if not end_time == '':
-            self.item_list[apply_time_item_index]["end_time"] = end_time
+        try:
+            if not start_time == '':
+                self.item_list[apply_time_item_index]["start_time"] = start_time
+            if not end_time == '':
+                self.item_list[apply_time_item_index]["end_time"] = end_time
 
-        # 更新界面
-        self.list_load_item(self.item_list[apply_time_item_index], apply_time_item_index)
+            # 更新界面
+            self.list_load_item(self.item_list[apply_time_item_index], apply_time_item_index)
+        except IndexError:
+            wx.MessageBox("尝试应用一个不存在的素材", "错误")
+
 
     def AddFileBtnOnClick(self, event):
         # 文件选择对话框
