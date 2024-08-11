@@ -13,6 +13,9 @@ class MyTestCase(unittest.TestCase):
         self.assertFalse(ConfigTool.timeStrIsValid("错误的"))
         self.assertFalse(ConfigTool.timeStrIsValid("daigoaf"))
 
+    def test_compareTimeStr(self):
+        pass
+
 
 if __name__ == '__main__':
     unittest.main()
