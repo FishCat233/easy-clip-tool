@@ -17,7 +17,7 @@ Easy Clip Tool 是一款简单的影视素材剪辑器，它可以对素材（�
 获取 Easy Clip Tool，可以在 release 页面中找到打包可供 windows 平台使用的可执行程序文件。
 
 对于其他平台，很不幸的是，您可能需要下载项目源代码进行一些修改——因为我在命令行生成的部分以 windows 平台为目标实现了。
-关于命令行生成的部分，您可以在 (`EasyClipMainFrame.py`) `PureClipMainFrame.ExportBtnOnClick()` 的实现中找到。
+关于命令行生成的部分，您可以在 (`EasyClipMainFrame.py`) `EasyClipToolMainFrame.ExportBtnOnClick()` 的实现中找到。
 
 ---
 
@@ -25,9 +25,9 @@ Easy Clip Tool 是一款简单的影视素材剪辑器，它可以对素材（�
 项目源代码由四个文件组成：
 
 - `main.py`
-- `PureClip.py`
-- `PureClipMainFrame.py`
-- `PureClipFBP.fbp`
+- `EasyClipTool.py`
+- `EasyClipToolMainFrame.py`
+- `EasyClipToolFBP.fbp`
 
 我会在下面一个接一个地介绍这些文件的作用。
 ### `main.py`
