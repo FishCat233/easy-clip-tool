@@ -1,3 +1,5 @@
+import sys
+
 from EasyClipToolMainFrame import *
 
 if __name__ == '__main__':
@@ -6,4 +8,4 @@ if __name__ == '__main__':
     mainFrame.Show(True)
     App.MainLoop()
 
-    exit()
+    sys.exit()
